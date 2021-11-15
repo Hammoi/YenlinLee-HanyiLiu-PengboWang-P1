@@ -7,4 +7,6 @@ APCSP Web Project
 - recommend games
 - simple games (connect four, tic tac toe)
 
-Web master
+Web Master - Hanyi Liu
+Database Specialist - Yenlin Lee
+Content Specialist - Pengbo Wang
