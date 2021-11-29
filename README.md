@@ -4,7 +4,7 @@ APCSP Web Project
 **- how to play sports/basketball**
   - basketball, football, badminton, tennis, ping pong
 
-
+**- other ideas:**
 - learn vocab page
 - COUNTRIES
 - recommend games
