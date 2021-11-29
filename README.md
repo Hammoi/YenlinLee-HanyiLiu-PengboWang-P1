@@ -1,7 +1,8 @@
 # YenlinLee-HanyiLiu-PengboWang-P1
 APCSP Web Project
 
-- how to play sports/basketball
+**- how to play sports/basketball**
+  - basketball, football, badminton, tennis, ping pong
 - learn vocab page
 - COUNTRIES
 - recommend games
