@@ -1,6 +1,11 @@
 # YenlinLee-HanyiLiu-PengboWang-P1
 APCSP Web Project
 
+**About page will have:**
+  - about
+  - FAQ
+  - contacts
+  - 
 **- how to play sports/basketball**
   - basketball, football, badminton, tennis, ping pong
 
