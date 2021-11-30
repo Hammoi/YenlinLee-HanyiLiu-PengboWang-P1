@@ -22,13 +22,19 @@
         <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Sport 1 <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Basketball <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Sport 2 <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Football <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Sport 3 <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Badminton <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Tennis <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Ping Pong <span class="sr-only">(current)</span></a>
       </li>
     </ul>
   </div>
