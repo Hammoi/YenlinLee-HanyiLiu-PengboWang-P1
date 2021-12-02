@@ -2,16 +2,16 @@
   include_once 'menubar.php'
   ?>
 <link rel="stylesheet" href="page1.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!--content-->
-    <div class="content">
-      <img
-        src="https://static01.nyt.com/images/2021/08/03/sports/03olympics-basketball1/03olympics-basketball1-jumbo.jpg?quality=75&auto=webp"
-        class="img-fluid"
-        alt="Responsive image"
-      />
-      <h1>Name of Sport</h1>
-      <p>Brief description of sport......</p>
+    <?php
+require_once 'menubar.php'
+?>
+
+<!--Actual site begins here-->
+<h1>Name of Sport</h1>
       <br />
+  <img src="https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/sports-1584678012.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*" class="img-fluid" alt="Responsive image">
       <h1>Goal of Sport</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolor qui
@@ -51,5 +51,4 @@
         vitae illum nostrum repellendus, officia quaerat. Veniam assumenda
         adipisci culpa sint!
       </p>
-    </div>
   </body>
