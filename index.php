@@ -1,3 +1,10 @@
+
+
+   
+<?php
+require_once 'menubar.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
