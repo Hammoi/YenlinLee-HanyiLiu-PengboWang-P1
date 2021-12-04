@@ -1,10 +1,3 @@
-
-
-   
-<?php
-require_once 'menubar.php'
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,12 +10,12 @@ require_once 'menubar.php'
   <body>
     <header>
       <nav>
-        <h3 id="Logo">Sport</h3>
-        <img
-          class="hamburger"
-          src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/50/000000/external-mobile-application-hamburger-menu-setting-interface-basic-filled-tal-revivo.png"
-          alt="hamburger"
-        />
+        <h2 id='home'>Home</h2>
+        <h3 id='column1'>About</h3>
+        <h3 id='column2'>Sport 1</h3>
+        <h3 id='column3'>Sport 2</h3>
+        <h3 id='column4'>Sport 3</h3>
+        <h3 id='column5'>Sport 4</h3>
       </nav>
       <section>
         <div class="hero">
