@@ -34,37 +34,6 @@ tl.fromTo(hero, 1, { height: "0%" }, { height: "80%", ease: Power2.easeInOut })
   .fromTo(column6, 0.5, { opacity: 0, x: 30 }, { opacity: 1, x: 0 }, "-+0.5");
 
 //content animation
-const header = document.querySelector("header");
-const sectionOne = document.querySelector(".home-intro");
-
-const faders = document.querySelectorAll(".fade-in");
-const sliders = document.querySelectorAll(".slide-in");
-
-const sectionOneOptions = {
-  rootMargin: "-200px 0px 0px 0px",
-};
-
-const sectionOneObserver = new IntersectionObserver(function (
-  entries,
-  sectionOneObserver
-) {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      header.classList.add("nav-scrolled");
-    } else {
-      header.classList.remove("nav-scrolled");
-    }
-  });
-},
-sectionOneOptions);
-
-sectionOneObserver.observe(sectionOne);
-
-const appearOptions = {
-  threshold: 0,
-  rootMargin: "0px 0px -250px 0px",
-};
-
 const appearOnScroll = new IntersectionObserver(function (
   entries,
   appearOnScroll
@@ -79,10 +48,6 @@ const appearOnScroll = new IntersectionObserver(function (
   });
 },
 appearOptions);
-
-faders.forEach((fader) => {
-  appearOnScroll.observe(fader);
-});
 
 sliders.forEach((slider) => {
   appearOnScroll.observe(slider);
