@@ -16,7 +16,7 @@
 
 nav {
   display: grid;
-  grid-template-columns: 3% 10% 1fr 1fr 1fr 1fr 1fr 40%;
+  grid-template-columns: 3% 10% 1fr 1fr 1fr 1fr 1fr 1fr 30%;
   min-height: 10vh;
   color: white;
   align-items: center;
@@ -46,6 +46,11 @@ nav {
 }
 #column5 {
   grid-column: 7/8;
+  font-size: 150%;
+}
+
+#column6 {
+  grid-column: 8/9;
   font-size: 150%;
 }
 
@@ -87,4 +92,36 @@ section {
   left: 0;
   opacity: 0.3;
   top: 0;
+}
+
+.more-stuff-grid {
+  background: #f4f4f4;
+  padding: 5% 0;
+  display: grid;
+  grid-gap: 5%;
+  align-items: center;
+  grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(200px, 400px)) minmax(
+      1em,
+      1fr
+    );
+}
+
+.from-left {
+  grid-column: 2/3;
+  transform: translateX(-50%);
+}
+
+.from-right {
+  grid-column: 3/4;
+  transform: translateX(50%);
+}
+
+.from-left,
+.from-right {
+  transition: transform 400ms ease-in;
+}
+
+.from-left.appear,
+.from-right.appear {
+  transform: translateX(0);
 }
