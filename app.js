@@ -36,7 +36,7 @@ tl.fromTo(hero, 1, { height: "0%" }, { height: "80%", ease: Power2.easeInOut })
 //content animation
 const sliders = document.querySelectorAll(".sliders");
 const appearOptions = {
-  threshold: 0,
+  threshold: 0.3,
   rootMargin: "0px 0px 0px 0px",
 };
 
