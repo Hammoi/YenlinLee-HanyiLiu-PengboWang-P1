@@ -23,15 +23,8 @@ tl.fromTo(hero, 1, { height: "0%" }, { height: "80%", ease: Power2.easeInOut })
     { x: "-100%" },
     { x: "0%", ease: Power2.easeInOut },
     "-=1.2"
-  )
-  .fromTo(home, 0.5, { opacity: 0, x: 30 }, { opacity: 1, x: 0 }, "-+0.5")
-  .fromTo(headline, 0.5, { opacity: 0, x: 30 }, { opacity: 1, x: 0 }, "-+0.5")
-  .fromTo(column1, 0.5, { opacity: 0, x: 30 }, { opacity: 1, x: 0 }, "-+0.5")
-  .fromTo(column2, 0.5, { opacity: 0, x: 30 }, { opacity: 1, x: 0 }, "-+0.5")
-  .fromTo(column3, 0.5, { opacity: 0, x: 30 }, { opacity: 1, x: 0 }, "-+0.5")
-  .fromTo(column4, 0.5, { opacity: 0, x: 30 }, { opacity: 1, x: 0 }, "-+0.5")
-  .fromTo(column5, 0.5, { opacity: 0, x: 30 }, { opacity: 1, x: 0 }, "-+0.5");
-//.fromTo(column6, 0.5, { opacity: 0, x: 30 }, { opacity: 1, x: 0 }, "-+0.5");
+  );
+//.fromTo(home, 0.5, { opacity: 0, x: 30 }, { opacity: 1, x: 0 }, "-+0.5")
 
 //content animation
 const sliders = document.querySelectorAll(".sliders");
@@ -59,3 +52,7 @@ appearOptions);
 sliders.forEach((slider) => {
   appearOnScroll.observe(slider);
 });
+
+function myFunction(x) {
+  x.classList.toggle("change");
+}
