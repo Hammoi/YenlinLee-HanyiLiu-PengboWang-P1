@@ -4,33 +4,40 @@
   box-sizing: border-box;
 }
 
-.topnav {
-  background-color: linear-gradient(to left, lightblue, orange);
+.navbar {
   overflow: hidden;
-  display: grid;
-  grid-template-columns: 3% 1fr 1fr 1fr 1fr 3%;
+  background-color: black;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 1;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
+/* Links inside the navbar */
+.navbar a {
   float: left;
-  color: #f2f2f2;
+  display: block;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #ddd;
   color: black;
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: black;
-  color: white;
+#lastColumn {
+  position: absolute;
+  right: 0;
+}
+
+/* Main content */
+.main {
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
 }
 
 .backgroundColor {
@@ -87,6 +94,11 @@ section {
 .grid {
   display: flex;
 }
+
+.title {
+  font-size: 200%;
+  text-align: center;
+}
 .from-left {
   flex: 50%;
   -webkit-transform: translateX(-50%);
@@ -122,5 +134,29 @@ section {
 }
 
 p {
-  padding: 5%;
+  padding: 2%;
+}
+
+footer {
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  font-size: 110%;
+  min-height: 10%;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  background: black;
+}
+
+.images {
+  height: 50%;
+  width: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  text-align: center;
+}
+
+span {
+  text-align: center;
 }
