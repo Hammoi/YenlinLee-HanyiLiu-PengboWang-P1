@@ -1,9 +1,3 @@
-var connect = function connect() {
-
-};
-
-module.exports.connect = connect;
-
 //const util = require('util');
 const mysql = require('mysql');
 /**
@@ -21,10 +15,10 @@ const pool = mysql.createPool({
 });
 
 pool.getConnection((err, connection) => {
-    if (err) {
-        console.error("Something went wrong connecting to the database ...");
-        console.log(err);
-    }
+    // if (err) {
+    //     console.error("Something went wrong connecting to the database ...");
+    //     console.log(err);
+    // }
     if (connection) {
         console.log("Successfully connected to mySQL.");
         connection.release();
