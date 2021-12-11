@@ -3,7 +3,19 @@ const { builtinModules } = require('module');
 // const connect = require("./connect.js");
 const start = require("./start");
 
+/*
+CREATE DATABASE ON SQL FIRST:
+------------------------
+CREATE DATABASE IF NOT EXISTS website;
+USE website;
+CREATE TABLE users ( 
+	id int AUTO_INCREMENT,
+	username varchar(20),
+	password varchar(20),
+);
+-------------------
 
+*/
 //connect.connect();
 
 const app = express();
