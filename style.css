@@ -150,13 +150,27 @@ footer {
 }
 
 .images {
-  height: 50%;
-  width: 50%;
+  height: 80%;
+  width: 80%;
+  background-color: black;
   overflow: hidden;
   object-fit: cover;
   text-align: center;
 }
 
-span {
+.passageTitle {
+  font-size: 100%;
   text-align: center;
+}
+
+span {
+  grid-row: 20%;
+  text-align: center;
+  font-size: 200%;
+}
+
+.layout {
+  display: grid;
+  grid-template-rows: 20% 1fr;
+  font-size: 120%;
 }
