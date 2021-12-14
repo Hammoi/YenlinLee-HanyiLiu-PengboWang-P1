@@ -296,6 +296,7 @@ span {
 
 .layout {
   display: grid;
-  grid-template-rows: 20% 1fr;
+  grid-template-rows: 50px 1fr;
+  grid-row-gap: 10px;
   font-size: 120%;
 }
