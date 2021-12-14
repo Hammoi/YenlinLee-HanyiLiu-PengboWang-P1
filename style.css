@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: black;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 1;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+#lastColumn {
+  position: absolute;
+  right: 0;
+}
+
+/* Main content */
+.main {
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+
+.backgroundColor {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to left, white, rgb(22, 97, 82));
+  z-index: -1;
+}
+
+section {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  margin-top: 10%;
+  height: 60%;
+  width: 100%;
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.headline {
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  font-size: 100px;
+  transform: translate(-20%, -70%);
+  color: white;
+  z-index: 3;
+}
+
+.hero::after {
+  content: "";
+  background: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  opacity: 0.3;
+  top: 0;
+}
+
+.grid {
+  display: flex;
+}
+
+.title {
+  font-size: 200%;
+  text-align: center;
+}
+.from-left {
+  flex: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.from-right {
+  flex: 50%;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+.from-left {
+  transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in,
+    -webkit-transform 400ms ease-in;
+  opacity: 0;
+}
+.from-right {
+  transition: opacity 300ms ease-in, -webkit-transform 800ms ease-in;
+  transition: opacity 300ms ease-in, transform 800ms ease-in;
+  transition: opacity 300ms ease-in, transform 800ms ease-in,
+    -webkit-transform 800ms ease-in;
+  opacity: 0;
+}
+
+.from-left.appear,
+.from-right.appear {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+p {
+  padding: 2%;
+}
+
+footer {
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  font-size: 110%;
+  min-height: 10%;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  background: black;
+}
+
+.images {
+  height: 80%;
+  width: 80%;
+  background-color: black;
+  overflow: hidden;
+  object-fit: cover;
+  text-align: center;
+}
+
+.passageTitle {
+  font-size: 100%;
+  text-align: center;
+}
+
+span {
+  grid-row: 20%;
+  text-align: center;
+  font-size: 200%;
+}
+
+.layout {
+  display: grid;
+  grid-template-rows: 20% 1fr;
+  font-size: 120%;
+}
