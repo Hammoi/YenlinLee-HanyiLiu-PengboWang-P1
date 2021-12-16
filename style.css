@@ -218,6 +218,7 @@ section {
 
 .grid {
   display: flex;
+  border: 1px white solid;
 }
 
 .title {
@@ -226,6 +227,7 @@ section {
 }
 .from-left {
   flex: 50%;
+  border: solid white 5px;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
@@ -260,18 +262,6 @@ section {
 
 p {
   padding: 2%;
-}
-
-footer {
-  padding-top: 1.5%;
-  padding-bottom: 1.5%;
-  font-size: 110%;
-  min-height: 10%;
-  bottom: 0;
-  width: 100%;
-  color: white;
-  text-align: center;
-  background: black;
 }
 
 .images {
