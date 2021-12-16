@@ -2,71 +2,150 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
     <header>
-      <a href="#" class="site-logo" aria-label="homepage" style="color: black"
-        >HYP</a
+      <a
+        href="#"
+        class="site-logo"
+        aria-label="homepage"
+        style="font-size: 200%"
+        >HYI</a
       >
       <nav class="main-nav">
-        <ul class="nav__list" style="color: black">
-          <li class="nav__list-item" ;>
-            <a href="#" class="nav__link">Sport 1</a>
+        <ul class="nav__list">
+          <li class="nav__list-item">
+            <a href="#" class="nav__link">Badminton</a>
           </li>
           <li class="nav__list-item">
-            <a href="#" class="nav__link">Sport 2</a>
+            <a href="#" class="nav__link">Basketball</a>
           </li>
           <li class="nav__list-item">
-            <a href="#" class="nav__link">Sport 3</a>
+            <a href="#" class="nav__link">Football</a>
           </li>
           <li class="nav__list-item">
-            <a href="#" class="nav__link">Sport 4</a>
+            <a href="#" class="nav__link">Tennis</a>
           </li>
         </ul>
       </nav>
       <nav class="account">
         <ul class="nav__list">
           <li class="nav__list-item">
-            <a class="nav__link nav__link--btn" href="#" style="color: black"
-              >Login</a
-            >
+            <a class="nav__link nav__link--btn" href="#">Login</a>
           </li>
           <li class="nav__list-item">
             <a
               class="nav__link nav__link--btn nav__link--btn--highlight"
               href="#"
-              >SignUp</a
+              >Join</a
             >
           </li>
         </ul>
       </nav>
     </header>
-    <br />
-    <br /><br /><br /><br /><br />
-    <h1>Rules of Sports</h1>
-    <p class="description">
-      Ever wondered why is there such a thing called sports? The goal of sports
-      is to keep the players healthy. It is a non-violent way of exercising
-      along with interactions with teammates. Sports are beneficial to people of
-      all ages’ mental and physical health-being. Sports can help strengthen the
-      human body’s bones and muscles. In the mental aspect, it can help release
-      pressure and therefore improve peoples’ academic performance at work or at
-      school. The goal of our website is to provide you with information about
-      how to play sports so you can exercise with your friends in a fun way and
-      also live a healthier lifestyle.
-    </p>
+    <main>
+      <section class="home-intro">
+        <h1>Lets Know More About Sport!</h1>
+      </section>
 
-    <div id="outer" class="container">
-      <div class="button_slide slide_left box1">Basketball</div>
-      <div class="button_slide slide_left box2">Badminton</div>
-      <div class="button_slide slide_left box3">Football</div>
-      <div class="button_slide slide_left box4">Tennis</div>
-    </div>
+      <div class="home-about">
+        <h2>About us</h2>
+        <p>These are our development team</p>
+        <div class="columns">
+          <div class="col fade-in">
+            <h3>Hanyi Liu</h3>
+            <span>Webmaster</span>
+            <p>
+              American High School Junior full-time student. The webmaster of
+              this informative project. Responsible for quality control, testing
+              changes, and reporting bugs.
+              <br />
+              <br />
+              <span>Contact: hanliu931@fusdk12.net</span>
+            </p>
+          </div>
+          <div class="col fade-in">
+            <h3>Yen-Lin Lee</h3>
+            <span>Database Specialist</span>
+            <p>
+              American High School Junior full-time student. The database
+              specialist of this informative project. Responsible for PHP files,
+              and as well as the coding.
+              <br />
+              <br />
+              <span>Contact: yenlee027@fusdk12.net</span>
+            </p>
+          </div>
+          <div class="col fade-in">
+            <h3>Pengbo Wang</h3>
+            <span>Content Specialist</span>
+            <p>
+              American High School Junior full-time student. The content
+              specialist of this informative project. Responsible for the
+              information displayed on the visitors’ screen.
+              <br />
+              <br />
+              <span>Contact: penwan356@fusdk12.net</span>
+            </p>
+          </div>
+        </div>
+      </div>
 
+      <div class="home-more-stuff">
+        <div class="more-stuff-grid">
+          <img src="./badminton.jpg" alt="" class="slide-in from-left" />
+          <p class="slide-in from-right">
+            Single or duo team sport where the teams try to make the shuttlecock
+            land on ground on the other team’s side of the net.
+            <br />
+            <span class="button_slide slide_left badminton">Badminton</span>
+          </p>
+        </div>
+        <div class="more-stuff-grid">
+          <p class="slide-in from-left">
+            Competitive team sport where each team try to advance the ball and
+            shoot into the opponent’s basket to score points.
+            <br />
+            <span class="button_slide slide_left basketball">Basketball</span>
+          </p>
+          <img
+            src="https://s.yimg.com/ny/api/res/1.2/yPt6Ybw31C11d1B6sWBWaw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://s.yimg.com/os/creatr-images/2020-05/b9b27b40-9547-11ea-b5fb-0e86f7a8e4ad"
+            alt=""
+            class="slide-in from-right"
+          />
+        </div>
+        <div class="more-stuff-grid">
+          <img
+            src="https://d32ydbgkw6ghe6.cloudfront.net/production/uploads/cover_images/cd7649aa83e0c54a435b5ac1d7e7330bd386/i1080x475.jpg"
+            alt=""
+            class="slide-in from-left"
+          />
+          <p class="slide-in from-right">
+            Competitive team sport that each team tries to advance the ball into
+            the opponents end zone.
+            <span class="button_slide slide_left football">Football</span>
+          </p>
+        </div>
+        <div class="more-stuff-grid">
+          <p class="slide-in from-left">
+            Competitive team sport where each team try to advance the ball and
+            shoot into the opponent’s basket to score points.
+            <br />
+            <span class="button_slide slide_left tennis">Tennis</span>
+          </p>
+          <img
+            src="https://photoresources.wtatennis.com/photo-resources/2019/08/15/dbb59626-9254-4426-915e-57397b6d6635/tennis-origins-e1444901660593.jpg?width=1200&height=630"
+            alt=""
+            class="slide-in from-right"
+          />
+        </div>
+        <p></p>
+      </div>
+    </main>
     <script src="app.js"></script>
   </body>
 </html>
