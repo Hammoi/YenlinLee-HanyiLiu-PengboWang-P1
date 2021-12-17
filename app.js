@@ -7,6 +7,7 @@ const logo = document.querySelector("#Logo");
 const hamburger = document.querySelector(".hamburger");
 const headline = document.querySelector(".headline");
 //basketball
+const btn = document.querySelector(".btns");
 
 const tl = new TimelineMax();
 
