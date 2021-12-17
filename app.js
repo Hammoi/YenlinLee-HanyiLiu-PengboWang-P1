@@ -1,53 +1,48 @@
-const header = document.querySelector("header");
-const sectionOne = document.querySelector(".home-intro");
+const express = require('express');
+const { builtinModules } = require('module');
+// const connect = require("./connect.js");
+const startLogin = require("./login/start");
+const startRegister = require("./register/start");
 
-const faders = document.querySelectorAll(".fade-in");
-const sliders = document.querySelectorAll(".slide-in");
+/*
+CREATE DATABASE ON SQL FIRST:
+------------------------
+CREATE DATABASE IF NOT EXISTS website;
+USE website;
+CREATE TABLE users ( 
+	username varchar(20),
+	password varchar(20),
+    liked int DEFAULT 0
+);
+-------------------
 
-const sectionOneOptions = {
-  rootMargin: "-200px 0px 0px 0px",
-};
+*/
+//connect.connect();
 
-const sectionOneObserver = new IntersectionObserver(function (
-  entries,
-  sectionOneObserver
-) {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      header.classList.add("nav-scrolled");
-    } else {
-      header.classList.remove("nav-scrolled");
-    }
-  });
-},
-sectionOneOptions);
+const app = express();
 
-sectionOneObserver.observe(sectionOne);
+app.use(express.urlencoded({ extended: false })); //Sets parser as express
 
-const appearOptions = {
-  threshold: 0,
-  rootMargin: "0px 0px -250px 0px",
-};
 
-const appearOnScroll = new IntersectionObserver(function (
-  entries,
-  appearOnScroll
-) {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      return;
-    } else {
-      entry.target.classList.add("appear");
-      appearOnScroll.unobserve(entry.target);
-    }
-  });
-},
-appearOptions);
 
-faders.forEach((fader) => {
-  appearOnScroll.observe(fader);
+app.use(express.static(__dirname));
+
+app.set('view engine', 'ejs'); //Sets ejs as views
+
+app.use('/', startLogin); //Uses start.js
+app.use('/', startRegister); //Uses start.js
+
+app.get('/login', function(req, res) {
+    res.render('login'); //Render index.ejs
+
 });
 
-sliders.forEach((slider) => {
-  appearOnScroll.observe(slider);
+app.get('/register', function(req, res) {
+    res.render('register'); //Render index.ejs
+})
+
+app.listen(3001, () => { //Start server
+    console.log('Server is running on port 3001...');
 });
+
+module.exports = app;
