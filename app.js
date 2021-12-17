@@ -23,8 +23,8 @@ tl.fromTo(hero, 1, { height: "0%" }, { height: "80%", ease: Power2.easeInOut })
     { x: "-100%" },
     { x: "0%", ease: Power2.easeInOut },
     "-=1.2"
-  );
-//.fromTo(home, 0.5, { opacity: 0, x: 30 }, { opacity: 1, x: 0 }, "-+0.5")
+  )
+  .fromTo(btn, 0.5, { opacity: 0, x: 20 }, { opacity: 1, x: 0 }, "-+1");
 
 //content animation
 const sliders = document.querySelectorAll(".sliders");
