@@ -7,7 +7,7 @@ console.log("HELLO BRO WHAT");
 
 
 
-router.post('/loginNew', function(req, res) { //Is called when data is sent to /login via POST
+router.post('/loginNew', function(req, res) { //Is called when data is sent to /loginNew via POST
     console.log("check 1");
     var password = req.body.password;
     var username = req.body.username;
@@ -19,7 +19,8 @@ router.post('/loginNew', function(req, res) { //Is called when data is sent to /
     console.log(login.getPassword(username, function(result) {
         if (password == result) {
             console.log("Logged in.");
-            res.render('home');
+            res.redirect("/");
+
         }
     }));
 

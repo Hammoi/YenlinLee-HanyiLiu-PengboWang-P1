@@ -15,7 +15,12 @@ router.post('/registerNew', function(req, res) { //Is called when data is sent t
     console.log(password);
     console.log(username);
 
-    register.registerUser(username, password);
+    register.registerUser(username, password, function(status) {
+        if (status) {
+            res.redirect("/");
+        }
+    });
+
 
 
 });

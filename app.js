@@ -39,7 +39,11 @@ app.get('/login', function(req, res) {
 
 app.get('/register', function(req, res) {
     res.render('register'); //Render index.ejs
-})
+});
+
+app.get('/', function(req, res) {
+    res.render('home'); //Render home.ejs
+});
 
 app.listen(3001, () => { //Start server
     console.log('Server is running on port 3001...');

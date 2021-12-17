@@ -4,16 +4,37 @@ const connect = require("../connect.js");
 (function() {
 
 
-    module.exports.registerUser = function(username, password) {
+    module.exports.registerUser = function(username, password, callback) {
         var values = [username, password];
-        let sql = `INSERT INTO users(username, password) VALUES (?,?)`;
 
+        let check = `SELECT username FROM users WHERE username = ?;`;
 
-        connect.query(sql, values, function(err, result) {
+        connect.query(check, username, function(err, result) {
             if (err) throw err;
-        });
 
-        console.log("sent data to sql server.");
+            try {
+                result[0].username;
+                console.log("Username already exists.");
+                callback(false);
+                return;
+            } catch (err) {
+                console.log("Username does not exist.");
+
+                let sql = `INSERT INTO users(username, password) VALUES (?,?)`;
+
+
+
+
+                connect.query(sql, values, function(err, result) {
+                    if (err) throw err;
+                });
+
+                console.log("sent data to sql server.");
+                callback(true);
+            }
+
+        })
+
     }
 
 
