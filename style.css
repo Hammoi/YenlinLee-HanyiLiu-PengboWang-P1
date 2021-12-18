@@ -291,22 +291,30 @@ span {
   font-size: 120%;
 }
 
-.btns {
-  position: absolute;
-  top: 60%;
-  left: 78%;
-  display: flex;
-}
-
-.btn {
+.botton {
   background: transparent;
   border: none;
   margin: 87px;
   font-size: 50px;
   outline: none;
   color: grey;
+  z-index: 1;
 }
 
-.btn i:hover {
+h6 {
+  position: absolute;
+  top: 65%;
+  left: 86%;
+  display: flex;
+}
+h6:hover {
   cursor: pointer;
+}
+h2 {
+  position: absolute;
+  top: 90%;
+  left: 90%;
+  display: flex;
+  color: white;
+  z-index: 1;
 }
