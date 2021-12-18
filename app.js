@@ -5,8 +5,11 @@ const backgroundColor = document.querySelector(".backgroundColor");
 const logo = document.querySelector("#Logo");
 //sport
 const hamburger = document.querySelector(".hamburger");
+//sportname
 const headline = document.querySelector(".headline");
-//basketball
+//like button
+const botton = document.querySelector(".botton");
+const likes = document.querySelector(".likes");
 
 const tl = new TimelineMax();
 
@@ -24,7 +27,8 @@ tl.fromTo(hero, 1, { height: "0%" }, { height: "80%", ease: Power2.easeInOut })
     { x: "0%", ease: Power2.easeInOut },
     "-=1.2"
   )
-  .fromTo(btn, 0.5, { opacity: 0, x: 20 }, { opacity: 1, x: 0 }, "-+1");
+  .fromTo(botton, 0.5, { opacity: 0, x: 20 }, { opacity: 1, x: 0 }, "-+0.1")
+  .fromTo(likes, 0.5, { opacity: 0, x: 20 }, { opacity: 1, x: 0 }, "-+0.2");
 
 //content animation
 const sliders = document.querySelectorAll(".sliders");
