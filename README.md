@@ -19,7 +19,7 @@ USE website;
 CREATE TABLE users ( 
 	username varchar(20),
 	password varchar(20),
-	liked int DEFAULT 0
+	liked varchar(20)
 );
 ```
 5. Press "Go."
