@@ -1,0 +1,30 @@
+<header>
+    <a href="/" class="site-logo" aria-label="homepage" style="font-size: 200%">HYP</a
+  >
+    <nav class="main-nav">
+        <ul class="nav__list">
+            <li class="nav__list-item">
+                <a href="/badminton" class="nav__link">Badminton</a>
+    </li>
+    <li class="nav__list-item">
+        <a href="/basketball" class="nav__link">Basketball</a>
+    </li>
+    <li class="nav__list-item">
+        <a href="/football" class="nav__link">Football</a>
+    </li>
+    <li class="nav__list-item">
+        <a href="/tennis" class="nav__link">Tennis</a>
+    </li>
+    </ul>
+    </nav>
+
+    <!-- ACCOUNT PLACEHOLDER -->
+    <div id="acc-placeholder"></div>
+</header>
+<script src="//code.jquery.com/jquery.min.js"></script>
+
+<script>
+    $.get("status.html", function(data) {
+        $("#acc-placeholder").replaceWith(data);
+    });
+</script>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basketball</title>
+    <link rel="stylesheet" href="sports/basketball/style.css" />
+    <script src="https://kit.fontawesome.com/f6dcf461c1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- NAVBAR PLACEHOLDER -->
+    <div id="nav-placeholder"></div>
+    <section>
+        <div class="hero">
+            <img src="https://s.yimg.com/ny/api/res/1.2/yPt6Ybw31C11d1B6sWBWaw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://s.yimg.com/os/creatr-images/2020-05/b9b27b40-9547-11ea-b5fb-0e86f7a8e4ad" alt="" />
+            <h1 class="headline">Basketball</h1>
+            <!--like button-->
+            <h6>
+                <button onclick="Toggle1()" id="btnh1" class="botton">
+        <i class="fas fa-heart"></i>
+      </button>
+                <script>
+                    var btnvar1 = document.getElementById("btnh1");
+
+                    function Toggle1() {
+                        if (btnvar1.style.color == "red") {
+                            btnvar1.style.color = "grey";
+                        } else {
+                            btnvar1.style.color = "red";
+                        }
+                    }
+                </script>
+            </h6>
+            <h2 class="likes"># of like</h2>
+        </div>
+    </section>
+    </header>
+    <div class="backgroundColor"></div>
+    <!--content1-->
+    <div class="grid" style="margin-top: 10%">
+        <p class="from-left sliders title" style="background-color: rgb(200, 227, 236);">
+            <br>
+            <img src="src/Description.html" alt="">
+        </p>
+        <p class="from-left sliders layout" style="background-color: rgb(228, 199, 147); color: black">
+            <span>Brief Description of Sport</span> Basketball is a team sport where two teams play against each other. Each team consists of five players. Players play on a rectangular court that is 91.86 feet long, 49.21 feet wide, and 22.96 feet high.
+            With a total playing area of 4520.43 square feet.
+        </p>
+    </div>
+    <!--content2-->
+    <div class="grid">
+        <p class="from-left sliders layout" style="background-color: rgb(228, 199, 147); color: black">
+            <span>The Goal of Sport</span> The goal of the sport is to compete against the opposing team trying to shoot the ball in their basket the most times. There are players playing defense and offense in each team. Defensive players try to stop
+            the other team from shooting the ball in their basket while the offensive players try to shoot the ball in the other team’s basket. It is a team sport that requires lots of practice shooting the ball, cooperation and communication.
+        </p>
+        <p class="from-left sliders title" style="background-color: rgb(200, 227, 236);">
+            <br>
+            <img class='images' src="https://www.allsportamerica.com/wp-content/uploads/slider-basket-ball-court-putting-green.jpg" alt="images">
+        </p>
+    </div>
+    <!--content3-->
+    <div class="grid">
+        <p class="from-left sliders title" style="background-color: rgb(200, 227, 236);">
+            <br>
+            <img class='images' src="https://cdn1.vectorstock.com/i/1000x1000/17/30/basketball-equipment-set-vector-18221730.jpg" alt="images">
+        </p>
+        <p class="from-left sliders layout" style="background-color: rgb(228, 199, 147); color: black">
+            <span>Equipment</span> When playing basketball, the first thing that should come to mind should be the proper attire. It is recommended to wear polyester that absorbs sweat and is comfortable. (You do not want to wear jeans or other tight
+            and heavy clothing while playing basketball as they may rip). Proper basketball shoes is also recommended since it can provide ankle support and prevent injury. Other than what to wear, you definitely would need a basketball to play basketball,
+            as well as a basketball hoop. Also, don’t forget to mark the boundary of your courts!
+        </p>
+    </div>
+    <!--content4-->
+    <div class="grid">
+        <p class="from-left sliders layout" style="background-color: rgb(228, 199, 147); color: black">
+            <span>Rules</span> 1. Only five players per team on the court.<br> 2. The offense has five seconds to inbound the ball - after the offense scores a basket, the opposing team would gain possession of the ball. One of their players has to inbound
+            the ball from a designated sport on the sidelines of the court. The player would have five seconds to pass the ball to another player on their team.<br> 3. The offense must advance the ball - once an offensive team advances the ball past the
+            half-court line, the offensive team can not cross that line again.<br> 4. Defenders can’t interfere with a shot on a downward trajectory.<br> 5. Defenders can legally block or steal the ball<br>
+        </p>
+        <p class="from-left sliders title" style="background-color: rgb(200, 227, 236);">
+            <br>
+            <img class='images' src="src/court.gif" alt="images">
+        </p>
+    </div>
+    <!--content5-->
+    <div class="grid">
+        <p class="from-left sliders title" style="background-color: rgb(200, 227, 236);">
+            <br>
+            <img class='images' src="https://www.ncaa.com/_flysystem/public-s3/styles/original/public-s3/images/2018/10/07/virginia-cavaliers-basketball-road-win-louisville.jpg?itok=oWSAE35D" alt="images">
+        </p>
+        <p class="from-left sliders layout" style="background-color: rgb(228, 199, 147); color: black">
+            <span>How to Win</span> Winning in basketball is fairly simple. Just score more points than your opponents in the allotted game time. If the scores are tied, then an extra quarter will be played until a winner is found.
+        </p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="sports/basketball/app.js"></script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="navbar.js"></script>
+</body>
+
+<script>
+    console.log("yes wtf");
+    $.get("nav.html", function(data) {
+        $("#nav-placeholder").replaceWith(data);
+    });
+</script>
+
+</html>
