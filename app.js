@@ -5,8 +5,9 @@ const backgroundColor = document.querySelector(".backgroundColor");
 const logo = document.querySelector("#Logo");
 //sport
 const hamburger = document.querySelector(".hamburger");
+//sportname
 const headline = document.querySelector(".headline");
-//basketball
+//like button
 const botton = document.querySelector(".botton");
 const likes = document.querySelector(".likes");
 
