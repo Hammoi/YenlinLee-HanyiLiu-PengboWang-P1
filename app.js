@@ -30,7 +30,7 @@ const app = express();
 app.use(express.urlencoded({ extended: false })); //Sets parser as express
 app.use(bodyParser.json()); //JSON READER
 //SESSION STUFF (to keep user logged in)
-app.use(expressSession({ secret: 'your secret', saveUninitialized: true, resave: false }));
+app.use(expressSession({ secret: 'shhhh dont tell anyone :)', saveUninitialized: true, resave: false }));
 
 
 //app.use(express.static(__dirname));
@@ -84,51 +84,73 @@ app.get('/logout', function(req, res) {
     req.session.destroy();
     res.redirect("/");
 });
+
 //END LOGIN STUFF
 
 
 //SPORT PAGES
-app.get('/badminton', function(req, res) {
 
-    res.render('sports/badminton'); //Render badminton.ejs
+const checkLogin = function(req, callback) {
     if (req.session.user) {
-        // checkLike.getLiked(req.session.user, function callback(result) {
-        //     if (result.charAt(0) == "1") {
-        //         fs.copyFile('public/likeButton/in/on/like.css', 'public/like.css', (err) => {
-        //             if (err) throw err;
-        //             console.log('Rename complete!');
-        //         });
-        //     } else {
-        //         fs.copyFile('public/likeButton/in/off/like.css', 'public/like.css', (err) => {
-        //             if (err) throw err;
-        //             console.log('Rename complete!');
-        //         });
-        //     }
-        // });
         fs.copyFile('public/likeButton/in/like.css', 'public/like.css', (err) => {
             if (err) throw err;
             console.log('Rename complete!');
         });
+        callback(false);
     } else {
         fs.copyFile('public/likeButton/out/like.css', 'public/like.css', (err) => {
             if (err) throw err;
             console.log('Rename complete!');
         });
+
+        callback(true);
     }
+}
+app.get('/badminton', function(req, res) {
+
+
+    if (checkLogin(req, function(result) {
+            if (result) {
+                res.redirect("/");
+            } else {
+                res.render('sports/badminton'); //Render badminton.ejs
+            }
+        }));
+
+
 
 
 });
 
 app.get('/basketball', function(req, res) {
-    res.render('sports/basketball'); //Render basketball.ejs
+    if (checkLogin(req, function(result) {
+            if (result) {
+                res.redirect("/");
+            } else {
+                res.render('sports/basketball'); //Render basketball.ejs
+            }
+        }));
+
 });
 
 app.get('/football', function(req, res) {
-    res.render('sports/football'); //Render football.ejs
+    if (checkLogin(req, function(result) {
+            if (result) {
+                res.redirect("/");
+            } else {
+                res.render('sports/football'); //Render football.ejs
+            }
+        }));
 });
 
 app.get('/tennis', function(req, res) {
-    res.render('sports/tennis'); //Render tennis.ejs
+    if (checkLogin(req, function(result) {
+            if (result) {
+                res.redirect("/");
+            } else {
+                res.render('sports/tennis'); //Render tennis.ejs
+            }
+        }));
 });
 //END SPORT PAGES
 

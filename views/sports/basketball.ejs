@@ -18,23 +18,104 @@
             <img src="https://s.yimg.com/ny/api/res/1.2/yPt6Ybw31C11d1B6sWBWaw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://s.yimg.com/os/creatr-images/2020-05/b9b27b40-9547-11ea-b5fb-0e86f7a8e4ad" alt="" />
             <h1 class="headline">Basketball</h1>
             <!--like button-->
+            <link rel="stylesheet" href="like.css">
             <h6>
-                <button onclick="Toggle1()" id="btnh1" class="botton">
-        <i class="fas fa-heart"></i>
-      </button>
-                <script>
-                    var btnvar1 = document.getElementById("btnh1");
+                <!-- <link rel="stylesheet" href="like.css"> -->
+                <form action="/like" method="post" name="like" id="like" style="z-index:1">
+                    <input type="hidden" id="id" name="id" value="1">
+                    <button onclick="Toggle1()" id="btnh1" class="botton">
+                                    <i class="fas fa-heart"></i>
+                                </button>
 
-                    function Toggle1() {
-                        if (btnvar1.style.color == "red") {
-                            btnvar1.style.color = "grey";
-                        } else {
-                            btnvar1.style.color = "red";
+                    <script>
+                        console.log("hi")
+
+                        let sport = 2; //CHANGE THIS TOO
+
+                        let likeResponse = fetch("/likeJSON", {
+                            method: "POST",
+                            headers: {
+                                'Content-Type': 'application/json'
+                            }
+                        }).then(res => {
+                            console.log("LMAO");
+                            console.log(res.json().then(function(result) {
+                                console.log(result);
+                                let likes = result.likes;
+                                console.log("likes: " + likes)
+                                var btnvar1 = document.getElementById("btnh1");
+                                if (likes.charAt(sport - 1) == "1") {
+                                    btnvar1.style.color = "red";
+                                } else {
+                                    btnvar1.style.color = "gray";
+                                }
+                            }));
+                            //console.log(res.json())
+
+                            //console.log("Request complete! response:", JSON.parse(res.body).likes);
+
+                        });
+
+                        function Toggle1() {
+                            var btnvar1 = document.getElementById("btnh1");
+                            console.log(btnvar1.style.color);
+                            console.log("yesss")
+                            let likeNumber = document.getElementById("numberOfLikes");
+                            let numberString = likeNumber.textContent;
+                            var number;
+
+                            if (btnvar1.style.color == "red") { //UNLIKE
+                                document.like.action = "/unlike";
+                                number = parseInt(numberString.substring(0, numberString.indexOf(" "))) - 1;
+                                btnvar1.style.color = "grey";
+                            } else { //LIKE
+                                document.like.action = "/like";
+                                number = parseInt(numberString.substring(0, numberString.indexOf(" "))) + 1;
+                                btnvar1.style.color = "red";
+                            }
+                            //ADD check for plurality
+                            if (number == 1) {
+                                likeNumber.textContent = number + " like";
+                            } else {
+                                likeNumber.textContent = number + " likes";
+                            }
+
                         }
-                    }
-                </script>
+                    </script>
+                </form>
+
             </h6>
-            <h2 class="likes"># of like</h2>
+            <h2 class="likes" id="numberOfLikes"></h2>
+            <script>
+                let data = {
+                    sport: 2 //CHANGE THIS
+                };
+
+
+
+                let response = fetch("/getLikes", {
+                    method: "POST",
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                }).then(res => {
+
+                    console.log(res.json().then(function(result) {
+                        if (result.likes == 1) {
+                            document.getElementById("numberOfLikes").textContent = result.likes + " like";
+                        } else {
+                            document.getElementById("numberOfLikes").textContent = result.likes + " likes";
+                        }
+                    }));
+                    //console.log(res.json())
+
+                    //console.log("Request complete! response:", JSON.parse(res.body).likes);
+                });
+                // console.log("NO: " + JSON.parse(response));
+                console.log("YES: " + response);
+            </script>
+            <!-- END LIKE BUTTON -->
         </div>
     </section>
     </header>

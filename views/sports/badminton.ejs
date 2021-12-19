@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Badminton</title>
     <link rel="stylesheet" href="sports/badminton/style.css">
-    <link rel="stylesheet" href="like.css">
+
     <script src="https://kit.fontawesome.com/f6dcf461c1.js" crossorigin="anonymous"></script>
 
 </head>
@@ -19,7 +19,9 @@
         <div class="hero">
             <img src="/src/badminton.jpg" alt="" />
             <h1 class="headline">Badminton</h1>
+
             <!--like button-->
+            <link rel="stylesheet" href="like.css">
             <h6>
                 <!-- <link rel="stylesheet" href="like.css"> -->
                 <form action="/like" method="post" name="like" id="like" style="z-index:1">
@@ -72,7 +74,12 @@
                                 number = parseInt(numberString.substring(0, numberString.indexOf(" "))) + 1;
                                 btnvar1.style.color = "red";
                             }
-                            likeNumber.textContent = numberString.substring(0, 0) + number + numberString.substring(numberString.indexOf(" "));
+                            //ADD check for plurality
+                            if (number == 1) {
+                                likeNumber.textContent = number + " like";
+                            } else {
+                                likeNumber.textContent = number + " likes";
+                            }
 
                         }
                     </script>
@@ -82,7 +89,7 @@
             <h2 class="likes" id="numberOfLikes"></h2>
             <script>
                 let data = {
-                    sport: 1
+                    sport: 1 //CHANGE THIS
                 };
 
 
@@ -96,7 +103,11 @@
                 }).then(res => {
 
                     console.log(res.json().then(function(result) {
-                        document.getElementById("numberOfLikes").textContent = result.likes + " likes";
+                        if (result.likes == 1) {
+                            document.getElementById("numberOfLikes").textContent = result.likes + " like";
+                        } else {
+                            document.getElementById("numberOfLikes").textContent = result.likes + " likes";
+                        }
                     }));
                     //console.log(res.json())
 
@@ -105,6 +116,7 @@
                 // console.log("NO: " + JSON.parse(response));
                 console.log("YES: " + response);
             </script>
+            <!-- END LIKE BUTTON -->
         </div>
     </section>
     </header>

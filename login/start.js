@@ -28,13 +28,12 @@ router.post('/loginNew', function(req, res) { //Is called when data is sent to /
         }
     }));
 
-
-
-
-
 });
 
-router.post('success', function(req, res) {
-
+router.post('/usernameJSON', function(req, res) {
+    res.send(JSON.stringify({
+        username: req.session.user
+    }));
 });
+
 module.exports = router;
