@@ -1,8 +1,11 @@
 const express = require('express');
 var expressSession = require('express-session');
+const bodyParser = require('body-parser');
 // const connect = require("./connect.js");
 const startLogin = require("./login/start");
 const startRegister = require("./register/start");
+const startLike = require("./like/start");
+const checkLike = require("./like/like.js");
 const path = require('path');
 const fs = require('fs');
 
@@ -25,7 +28,7 @@ CREATE TABLE users (
 const app = express();
 
 app.use(express.urlencoded({ extended: false })); //Sets parser as express
-
+app.use(bodyParser.json()); //JSON READER
 //SESSION STUFF (to keep user logged in)
 app.use(expressSession({ secret: 'your secret', saveUninitialized: true, resave: false }));
 
@@ -36,8 +39,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'ejs'); //Sets ejs as views
 
-app.use('/', startLogin); //Uses start.js
-app.use('/', startRegister); //Uses start.js
+app.use('/', startLogin); //Uses start.js of login
+app.use('/', startRegister); //Uses start.js of register
+app.use('/', startLike); //Uses start.js of like
 
 //MAIN PAGE
 app.get('/', function(req, res) {
@@ -49,6 +53,7 @@ app.get('/', function(req, res) {
             if (err) throw err;
             console.log('Rename complete!');
         });
+
 
     } else {
         fs.copyFile('public/status/out/status.html', 'public/status.html', (err) => {
@@ -81,10 +86,36 @@ app.get('/logout', function(req, res) {
 });
 //END LOGIN STUFF
 
+
 //SPORT PAGES
 app.get('/badminton', function(req, res) {
 
     res.render('sports/badminton'); //Render badminton.ejs
+    if (req.session.user) {
+        // checkLike.getLiked(req.session.user, function callback(result) {
+        //     if (result.charAt(0) == "1") {
+        //         fs.copyFile('public/likeButton/in/on/like.css', 'public/like.css', (err) => {
+        //             if (err) throw err;
+        //             console.log('Rename complete!');
+        //         });
+        //     } else {
+        //         fs.copyFile('public/likeButton/in/off/like.css', 'public/like.css', (err) => {
+        //             if (err) throw err;
+        //             console.log('Rename complete!');
+        //         });
+        //     }
+        // });
+        fs.copyFile('public/likeButton/in/like.css', 'public/like.css', (err) => {
+            if (err) throw err;
+            console.log('Rename complete!');
+        });
+    } else {
+        fs.copyFile('public/likeButton/out/like.css', 'public/like.css', (err) => {
+            if (err) throw err;
+            console.log('Rename complete!');
+        });
+    }
+
 
 });
 
