@@ -1,11 +1,9 @@
 APCSP Web Project
 
 A website explaining the rules of various sports and a system allowing users to "like" their own sports for Mr. Millard's APCSP class.
-- how to play sports/basketball
-- learn vocab page
-- COUNTRIES
-- recommend games
-- simple games (connect four, tic tac toe)
+- how to play sports
+- badminton, basketball, football, tennis
+
 
 Web Master - Hanyi Liu
 
