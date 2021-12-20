@@ -1,10 +1,32 @@
 <nav class="account">
     <ul class="nav__list">
         <li class="nav__list-item">
-            <a class="nav__link nav__link--btn" href="/login">Login</a>
+            <a class="nav__link nav__link--btn" id="displayName" href="/">WELCOME BACK</a>
         </li>
         <li class="nav__list-item">
-            <a class="nav__link nav__link--btn nav__link--btn--highlight" href="/register">Register</a>
+            <a class="nav__link nav__link--btn nav__link--btn--highlight" href="/logout">Log Out</a>
         </li>
     </ul>
 </nav>
+
+<script>
+    let likeResponse = fetch("/usernameJSON", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(res => {
+        console.log("LMAOO");
+        console.log(res.json().then(function(result) {
+            console.log(result);
+            let username = result.username;
+            console.log("username: " + username)
+            var textName = document.getElementById("displayName");
+            textName.textContent = "WELCOME BACK, " + username;
+        }));
+        //console.log(res.json())
+
+        //console.log("Request complete! response:", JSON.parse(res.body).likes);
+
+    });
+</script>
