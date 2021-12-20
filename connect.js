@@ -1,7 +1,6 @@
-//const util = require('util');
 const mysql = require('mysql');
 /**
- * Connection to the database.
+ * Connects to database.
  *  */
 
 console.log("Establishing connection with mySQL...");
