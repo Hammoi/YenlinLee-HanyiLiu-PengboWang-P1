@@ -111,7 +111,7 @@ app.get('/badminton', function(req, res) {
 
     if (checkLogin(req, function(result) {
             if (result) {
-                res.redirect("/");
+                res.redirect("/login");
             } else {
                 res.render('sports/badminton'); //Render badminton.ejs
             }
@@ -125,7 +125,7 @@ app.get('/badminton', function(req, res) {
 app.get('/basketball', function(req, res) {
     if (checkLogin(req, function(result) {
             if (result) {
-                res.redirect("/");
+                res.redirect("/login");
             } else {
                 res.render('sports/basketball'); //Render basketball.ejs
             }
@@ -136,7 +136,7 @@ app.get('/basketball', function(req, res) {
 app.get('/football', function(req, res) {
     if (checkLogin(req, function(result) {
             if (result) {
-                res.redirect("/");
+                res.redirect("/login");
             } else {
                 res.render('sports/football'); //Render football.ejs
             }
@@ -146,7 +146,7 @@ app.get('/football', function(req, res) {
 app.get('/tennis', function(req, res) {
     if (checkLogin(req, function(result) {
             if (result) {
-                res.redirect("/");
+                res.redirect("/login");
             } else {
                 res.render('sports/tennis'); //Render tennis.ejs
             }
