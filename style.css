@@ -294,7 +294,6 @@ span {
 .botton {
   background: transparent;
   border: none;
-  margin: 87px;
   font-size: 50px;
   outline: none;
   color: grey;
@@ -303,17 +302,18 @@ span {
 
 h6 {
   position: absolute;
-  top: 65%;
-  left: 86%;
+  top: 80%;
+  left: 90%;
   display: flex;
 }
 h6:hover {
   cursor: pointer;
 }
+
 h2 {
   position: absolute;
   top: 90%;
-  left: 90%;
+  left: 88%;
   display: flex;
   color: white;
   z-index: 1;
