@@ -41,4 +41,5 @@ CREATE TABLE users (
 );
 ```
 5. Press "Go."
-6. Now run app.js with node.js using "node app.js" in terminal/command prompt (make sure you're in the right directory).
+6. Create user with username 'admin' and password 'admin' on phpMyAdmin (or change the credentials in file at connect.js). Grant all privileges. 
+7. Now run app.js with node.js using "node app.js" in terminal/command prompt (make sure you're in the right directory).
