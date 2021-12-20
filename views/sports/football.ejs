@@ -23,7 +23,7 @@
             <h6>
                 <!-- <link rel="stylesheet" href="like.css"> -->
                 <form action="/like" method="post" name="like" id="like" style="z-index:1">
-                    <input type="hidden" id="id" name="id" value="1">
+                    <input type="hidden" id="id" name="id" value="3">
                     <button onclick="Toggle1()" id="btnh1" class="botton">
                                     <i class="fas fa-heart"></i>
                                 </button>
@@ -58,6 +58,7 @@
                         });
 
                         function Toggle1() {
+
                             var btnvar1 = document.getElementById("btnh1");
                             console.log(btnvar1.style.color);
                             console.log("yesss")
@@ -94,6 +95,7 @@
 
 
 
+
                 let response = fetch("/getLikes", {
                     method: "POST",
                     headers: {
@@ -109,6 +111,7 @@
                             document.getElementById("numberOfLikes").textContent = result.likes + " likes";
                         }
                     }));
+
                     //console.log(res.json())
 
                     //console.log("Request complete! response:", JSON.parse(res.body).likes);

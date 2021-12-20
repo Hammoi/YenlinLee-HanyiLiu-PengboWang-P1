@@ -40,7 +40,7 @@
                             </div>
                             <div class="field">
                                 <p class="control has-icons-left">
-                                    <input class="input is-medium" type="text" id="password" name="password" placeholder="Password" />
+                                    <input class="input is-medium" type="password" id="password" name="password" placeholder="Password" />
                                     <span class="icon is-small is-left">    
                                         <i class="fas fa-lock"></i>
                                     </span>
@@ -48,7 +48,7 @@
                             </div>
                             <div class="field">
                                 <p class="control has-icons-left">
-                                    <input class="input is-medium" type="password" placeholder="Confirm Password" />
+                                    <input class="input is-medium" onkeyup="enableRegister()" type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" />
                                     <span class="icon is-small is-left">
                         
                                         <i class="fas fa-lock"></i>
@@ -56,8 +56,22 @@
                                 </p>
                             </div>
 
+                            <script>
+                                function enableRegister() {
+                                    document.getElementById("registerButton").removeAttribute('disabled');
 
-                            <button class="button is-block is-info is-large is-fullwidth">Register</button><br />
+                                }
+
+                                function checkPassword() {
+                                    if (document.getElementById("password").value != document.getElementById("confirmPassword").value) {
+                                        document.getElementById("registerButton").setAttribute('disabled', 'disabled');
+                                        alert("Passwords do not match.")
+                                    }
+                                }
+                            </script>
+
+
+                            <button class="button is-block is-info is-large is-fullwidth" onclick="checkPassword()" id="registerButton">Register</button><br />
 
                         </form>
                     </div>

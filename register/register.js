@@ -15,6 +15,7 @@ const connect = require("../connect.js");
             try {
                 result[0].username;
                 console.log("Username already exists.");
+                alert("Username already exists.")
                 callback(false);
                 return;
             } catch (err) {
